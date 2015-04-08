@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= key %></title>
+</head>
+<body>
+	<h1> your search for <%= key %> looks like . . .</h1>
+
+	<form method ="POST" action ="/saved">
+	 <% gifs.forEach(function(url){ %> 
+	 	<div class="item">
+		<input type="checkbox" name="mark" value ="<%=url%>">
+		<img src="<%= url %>">
+		</div>
+	 <%});%>
+	<button>submit</button>
+	</form>
+</body>
+</html>
